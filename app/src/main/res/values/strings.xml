@@ -3,4 +3,6 @@
     <string name="start_location_updates">Start location updates</string>
     <string name="stop_location_updates">Stop location updates</string>
     <string name="location_text">0.00/0.00</string>
+    <string name="location_time_update">00:00</string>
+    <string name="error_message">Adjust location settings on your device</string>
 </resources>
