@@ -6,10 +6,15 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button startLocationUpdatesButton, stopLocationUpdatesButton;
     private TextView locationTextView;
+
+    private FusedLocationProviderClient fusedLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +28,7 @@ public class MainActivity extends AppCompatActivity {
         startLocationUpdatesButton = findViewById(R.id.start_location_updates_button);
         stopLocationUpdatesButton = findViewById(R.id.stop_location_updates_button);
         locationTextView = findViewById(R.id.locaciot_text_view);
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
     }
 }
